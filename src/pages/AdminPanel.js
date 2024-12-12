@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api'; // Axios instance
-import '../App.css'; // Global styles
-import './AdminPanel.css'; // Admin Panel specific styles
+import api from '../api';
+import '../App.css';
+import './AdminPanel.css'; 
 
 const AdminPanel = () => {
     const [profiles, setProfiles] = useState([]);
@@ -36,8 +36,8 @@ const AdminPanel = () => {
     const handleAddProfile = () => {
         api.post('/profiles', newProfile)
             .then(() => {
-                fetchProfiles(); // Refresh the profiles list
-                setNewProfile({ name: '', description: '', image_url: '', address: '' }); // Reset the form
+                fetchProfiles(); 
+                setNewProfile({ name: '', description: '', image_url: '', address: '' }); 
             })
             .catch((error) => {
                 console.error('Error adding profile:', error);
@@ -51,8 +51,8 @@ const AdminPanel = () => {
     const handleUpdateProfile = () => {
         api.put(`/profiles/${editingProfile.id}`, editingProfile)
             .then(() => {
-                fetchProfiles(); // Refresh the profiles list
-                setEditingProfile(null); // Exit editing mode
+                fetchProfiles(); 
+                setEditingProfile(null); 
             })
             .catch((error) => {
                 console.error('Error updating profile:', error);
@@ -62,7 +62,7 @@ const AdminPanel = () => {
     const handleDeleteProfile = (id) => {
         api.delete(`/profiles/${id}`)
             .then(() => {
-                fetchProfiles(); // Refresh the profiles list
+                fetchProfiles(); 
             })
             .catch((error) => {
                 console.error('Error deleting profile:', error);

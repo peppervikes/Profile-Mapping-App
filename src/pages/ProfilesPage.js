@@ -39,7 +39,7 @@ const ProfilesPage = () => {
         setTimeout(() => {
             setSelectedAddress(address);
             setLoadingMap(false);
-        }, 1000); // Simulated loading for user feedback
+        }, 1000); 
     };
 
     const handleAccordionToggle = (index) => {

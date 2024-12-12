@@ -10,7 +10,7 @@ function MapComponent({ address }) {
       style={{
         position: 'relative',
         overflow: 'hidden',
-        paddingTop: '56.25%', // 16:9 aspect ratio
+        paddingTop: '56.25%', 
         margin: '20px 0',
       }}
     >

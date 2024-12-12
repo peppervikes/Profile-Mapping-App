@@ -5,7 +5,7 @@ function SearchBar({ onSearch }) {
 
   const handleSearchChange = (e) => {
     setQuery(e.target.value);
-    onSearch(e.target.value); // Pass the query back to the parent component
+    onSearch(e.target.value); 
   };
 
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProfilesPage from './pages/ProfilesPage';
 import ProfileDetails from './components/ProfileDetails';
-import AboutUs from './pages/AboutUs'; // import AboutUs component
+import AboutUs from './pages/AboutUs'; 
 import AdminPanel from './pages/AdminPanel';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'; 

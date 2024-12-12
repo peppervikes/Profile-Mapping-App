@@ -6,7 +6,7 @@ const AboutUs = () => {
             <h1>About Me</h1>
             <div style={styles.content}>
                 <img
-                    src="/Vikalp.jpg" // Place your photo in the public folder and reference it here
+                    src="/Vikalp.jpg" 
                     alt="My Photo"
                     style={styles.image}
                 />
@@ -28,7 +28,6 @@ const AboutUs = () => {
     );
 };
 
-// Styling
 const styles = {
     container: {
         textAlign: 'center',

@@ -6,7 +6,7 @@ const ProfileDetails = () => {
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null); // For error handling
+    const [error, setError] = useState(null); 
 
     useEffect(() => {
         // Fetch detailed profile information
