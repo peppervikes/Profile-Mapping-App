@@ -1,6 +1,3 @@
-Here's the content for your `README.md` file, formatted for GitHub:
-
-```markdown
 # Profile Mapping Web Application
 
 ## Overview
@@ -143,11 +140,3 @@ Feel free to fork this repository, create a branch, and submit pull requests. If
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE).
-```
-
-### Notes:
-- **Replace `your-username`** with your actual GitHub username in the clone URL.
-- You can add more details or change the content as per your project needs.
-- The file is designed with standard markdown syntax and GitHub will render it correctly with proper formatting when uploaded.
-
-Just copy this content into a file named `README.md` and push it to your GitHub repository.
