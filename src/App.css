@@ -1,0 +1,73 @@
+/* App.css - Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.accordion-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.accordion {
+  flex: 2;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-item {
+  width: 80%;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-item.active-item {
+  width: 40%;
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-image {
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+.map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  max-height: 500px;
+}
