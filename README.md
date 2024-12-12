@@ -36,7 +36,7 @@ Make sure you have the following software installed:
 #### 1. Clone the repository
 First, clone the repository to your local machine:
 ```bash
-git clone https://github.com/your-username/profile-mapping-app.git
+git clone https://github.com/peppervikes/profile-mapping-app.git
 cd profile-mapping-app
 ```
 
