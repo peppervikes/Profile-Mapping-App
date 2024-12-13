@@ -87,24 +87,27 @@ app.delete('/profiles/:id', (req, res) => {
 });
 
 // Fetch a profile by ID
-app.get('/profile/:id', async (req, res) => {
+app.get('/profile/:id', (req, res) => {
     const { id } = req.params;
-    try {
-        const profile = db.query(
-            `SELECT profiles.*, profile_details.contact, profile_details.interests
-             FROM profiles
-             LEFT JOIN profile_details ON profiles.id = profile_details.profile_id
-             WHERE profiles.id = ?`, [id]
-        );
-        if (profile.length === 0) {
-            return res.status(404).send('Profile not found');
-        }
-        res.json(profile[0]);
-    } catch (error) {
-        res.status(500).send('Error fetching profile details');
-    }
-});
 
+    const query = `
+        SELECT profiles.*, profile_details.contact, profile_details.interests
+        FROM profiles
+        LEFT JOIN profile_details ON profiles.id = profile_details.profile_id
+        WHERE profiles.id = ?
+    `;
+
+    db.query(query, [id], (err, results) => {
+        if (err) {
+            console.error('Error fetching profile details:', err);
+            res.status(500).send('Error fetching profile details');
+        } else if (results.length === 0) {
+            res.status(404).send('Profile not found');
+        } else {
+            res.json(results[0]);
+        }
+    });
+});
 
 
 app.listen(PORT, () => {
